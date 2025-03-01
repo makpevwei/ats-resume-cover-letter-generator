@@ -84,12 +84,13 @@ def save_as_docx(text, filename):
     Returns:
         BytesIO: A stream containing the Word document data.
     """
-    doc = Document()
-    doc.add_paragraph(text)
-    doc_io = BytesIO()
-    doc.save(doc_io)
-    doc_io.seek(0)
-    return doc_io
+    doc = Document()             # Create a new Word document
+    doc.add_paragraph(text)      # Add the text as a paragraph in the document
+    doc_io = BytesIO()           # Create an in-memory file (like a virtual folder)
+    doc.save(doc_io)             # Save the document into this virtual folder
+    doc_io.seek(0)               # Go back to the start of the virtual file
+    return doc_io                # Return this file for download
+
 
 # Streamlit UI Header with Template Notice
 st.header("ATS Resume & Cover Letter Generator Template ✍️")
