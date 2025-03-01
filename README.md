@@ -1,6 +1,6 @@
 # Gemini Resume App
 
-A simple Streamlit app for generating ATS-friendly resumes and cover letters using Google's Gemini API.
+A simple Streamlit app for generating ATS-friendly resumes and cover letters template using Google's Gemini API and which can be downloaded and modified in your word document.
 
 ## Overview
 

@@ -91,9 +91,16 @@ def save_as_docx(text, filename):
     doc_io.seek(0)
     return doc_io
 
-# Streamlit UI Header
-st.header("ATS Resume & Cover Letter Generator ✍️")
-st.write("Enter the job details to generate a professional ATS-optimized document.")
+# Streamlit UI Header with Template Notice
+st.header("ATS Resume & Cover Letter Generator Template ✍️")
+st.write("This template can be downloaded as a Word file and modified as needed. Enter the job details below to generate a professional ATS-optimized document.")
+
+# Expander to explain ATS (Applicant Tracking System)
+with st.expander("What is ATS?"):
+    st.write("""
+    **ATS (Applicant Tracking System)** is software used by companies to manage the recruitment process. 
+    It helps in sorting, ranking, and filtering resumes to find the best candidates efficiently.
+    """)
 
 # User Inputs for Job Details
 job_title = st.text_input("Job Title", placeholder="Enter job title")
