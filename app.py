@@ -19,7 +19,7 @@ except Exception:
 genai.configure(api_key=api_key)
 
 # Define model and system behavior
-MODEL_NAME = "gemini-2.0 flash"
+MODEL_NAME = "gemini-2.0-flash"
 SYSTEM_INSTRUCTIONS = "You are a professional resume and cover letter writer specializing in ATS-optimized documents."
 
 # Template for prompting Gemini API
