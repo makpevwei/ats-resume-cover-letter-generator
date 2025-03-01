@@ -126,8 +126,19 @@ if st.button("Generate"):
         
         # Provide a download button so the user can choose to download the document
         st.download_button(
-            label="Download as Word Document",
-            data=doc_file,
-            file_name=filename,
-            mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-        )
+        # The text displayed on the download button
+        label="Download as Word Document",
+        
+        # The file data that will be downloaded.
+        # Here, 'doc_file' is an in-memory file (BytesIO object) that contains our Word document.
+        data=doc_file,
+        
+        # The filename that will be used when the file is downloaded.
+        # For example, it might be "resume.docx" or "cover_letter.docx" based on user selection.
+        file_name=filename,
+        
+        # The MIME type of the file. This tells the browser what type of file is being downloaded.
+        # For a Word document, the MIME type is "application/vnd.openxmlformats-officedocument.wordprocessingml.document".
+        mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    )
+
