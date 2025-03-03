@@ -26,5 +26,5 @@ This project provides a template for creating professional, ATS-optimized resume
 1. **Clone the repository:**
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/makpevwei/ats-resume-cover-letter-generator
    cd gemini-resume-app
